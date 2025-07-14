@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeyondCode - Autonomous Code Remediation Platform | Beyond-AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .healthcare-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #059669 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .healthcare-blue { background-color: #1e3a8a; }
+        .healthcare-green { background-color: #059669; }
+        .result-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%);
+            border-left: 4px solid #1e3a8a;
+        }
+        .nav-blue { color: #1e3a8a; }
+        .dark-blue-bg { background-color: #1e3a8a; }
+        .dark-green-bg { background-color: #059669; }
+        .text-red { color: #dc2626; }
+        .text-dark-blue { color: #1e3a8a; }
+        .text-dark-green { color: #059669; }
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-gray-800">BeyondCode</div>
+                    <div class="text-sm text-gray-600 ml-2">Powered by Pinnacle</div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#solution" class="nav-blue font-bold hover:text-blue-800">Solution</a>
+                    <a href="#platform" class="nav-blue font-bold hover:text-blue-800">Platform</a>
+                    <a href="#roi-calculator" class="nav-blue font-bold hover:text-blue-800">ROI Calculator</a>
+                    <a href="#case-studies" class="nav-blue font-bold hover:text-blue-800">Case Studies</a>
+                    <a href="#about" class="nav-blue font-bold hover:text-blue-800">About</a>
+                </div>
+                <button class="healthcare-gradient text-white px-6 py-2 rounded-lg font-semibold" onclick="window.location.href='mailto:tbrne@beyond-ai.net?subject=Demo Request'">
+                    Request Demo
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="healthcare-gradient text-white pt-24 pb-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-4">
+                <span class="bg-white bg-opacity-20 text-white px-4 py-2 rounded-full text-sm">
+                    Introducing Autonomous Code Remediation
+                </span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                The First-Ever Autonomous Code Remediation Platform:<br>
+                <span class="text-yellow-300">Saving Hospitals Millions in Preventable Denials</span>
+            </h1>
+            <p class="text-xl mb-8 max-w-4xl mx-auto">
+                BeyondCode automatically identifies and fixes the coding logic errors causing <strong>40-50% of claim denials</strong> - built on our enterprise-grade Pinnacle platform with native FHIR interoperability.
+            </p>
+            <div class="flex justify-center space-x-4 mb-8">
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded">HIPAA Compliant</span>
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded">FHIR Native</span>
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded">Enterprise Security</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">The $262 Billion Problem</h2>
+            <p class="text-lg text-gray-600 mb-8">Healthcare claim denials are escalating, with coding logic errors representing the largest addressable cause of preventable denials.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-red-600 mb-2">11.8%</div>
+                    <div class="text-lg font-semibold mb-2">Denial Rate</div>
+                    <p class="text-gray-600">Average across all payers, with Medicare Advantage reaching 18% denial rates - the fastest growing segment.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-gray-800 mb-2">40-50%</div>
+                    <div class="text-lg font-semibold mb-2">Coding Errors</div>
+                    <p class="text-gray-600">Of all claim denials stem from coding logic errors - modifier issues, bundling problems, and rule violations.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-dark-blue mb-2">Persistent</div>
+                    <div class="text-lg font-semibold mb-2 text-dark-blue">Logic Issues</div>
+                    <p class="text-gray-600">Broken logic denials persist for months because hospitals treat symptoms, not root causes.</p>
+                </div>
+            </div>
+
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-8 max-w-4xl mx-auto">
+                <h3 class="font-bold text-lg mb-2">Medicare Advantage Crisis</h3>
+                <ul class="text-left space-y-2">
+                    <li>• Medicare Advantage plans show 18% denial rates vs. 11.8% industry average</li>
+                    <li>• 48% of Medicare patients now in MA plans with complex, plan-specific rules</li>
+                    <li>• Each MA plan has different requirements, creating coding complexity</li>
+                </ul>
+            </div>
+
+            <p class="text-lg text-gray-700 italic">
+                Payers are now using AI to deny legitimate claims in as little as 2 seconds, creating an overwhelming tide of appeals for hospitals.
+            </p>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Autonomous Capabilities</h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-4xl mx-auto">
+                BeyondCode creates an entirely new category of healthcare technology: autonomous systems that identify, analyze, and fix coding logic errors before they cause denials. BeyondCode is the first and only solution that autonomously fixes billing logic errors at the source.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-search text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Intelligent Detection</h3>
+                    <p class="text-gray-600">Continuously monitors denied claims to identify patterns that prevent millions in revenue recovery</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-microscope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Root Cause Analysis</h3>
+                    <p class="text-gray-600">Analyzes payer-specific rules and coding requirements to pinpoint exact logic failures causing denials</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cog text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Autonomous Remediation</h3>
+                    <p class="text-gray-600">Automatically generates and implements coding fixes directly in your EHR systems without manual intervention</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Continuous Learning</h3>
+                    <p class="text-gray-600">Learns from each interaction to prevent future logic errors and improve coding accuracy over time</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg card-shadow max-w-4xl mx-auto">
+                <h3 class="text-xl font-bold mb-4">Key Differentiators</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        <span>Native FHIR interoperability</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        <span>Platform approach vs. point solution</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        <span>Fixes root causes vs. identifying problems</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        <span>Proactive vs. reactive approach</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        <span>No system replacement required</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        <span>Enterprise-grade security</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Evolution Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">BeyondCode Platform Evolution</h2>
+            <p class="text-lg text-gray-600 mb-12">Comprehensive Denial Prevention Across All Categories</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div class="dark-blue-bg text-white p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Phase 1: Autonomous Code Remediation (Available Now)</h3>
+                    <ul class="text-left space-y-3">
+                        <li>• Targets 40-50% of all denials through coding logic fixes</li>
+                        <li>• Largest preventable denial category</li>
+                        <li>• Immediate $15M-$25M impact per hospital</li>
+                    </ul>
+                </div>
+                <div class="dark-green-bg text-white p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Phase 2: Clinical Appeals & Real-Time Integration (Coming 2025)</h3>
+                    <ul class="text-left space-y-3">
+                        <li>• Adds clinical denial appeals (30% of denials)</li>
+                        <li>• Real-time prevention capabilities</li>
+                        <li>• Comprehensive 70-80% denial coverage</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Built on Pinnacle Platform -->
+    <section id="platform" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12">Built on Pinnacle Platform</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="dark-blue-bg text-white p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">Autonomous Code Generation</h3>
+                    <p>Automatically creates and implements billing logic fixes without manual intervention</p>
+                </div>
+                <div class="dark-blue-bg text-white p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">FHIR Integration</h3>
+                    <p>Native healthcare system compatibility with seamless EHR integration across all major platforms</p>
+                </div>
+                <div class="dark-green-bg text-white p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">Real-Time Intelligence</h3>
+                    <p>Instant payer rule updates and compliance monitoring for immediate logic adaptation</p>
+                </div>
+                <div class="dark-green-bg text-white p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">Self-Correcting Systems</h3>
+                    <p>Learns from each interaction to prevent future logic errors and improve coding accuracy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section id="roi-calculator" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Calculate Your ROI</h2>
+                <p class="text-lg text-gray-600">Discover the exact financial impact BeyondCode can deliver to your hospital. Our interactive calculator uses industry benchmarks to project your potential savings.</p>
+            </div>
+
+            <!-- Executive Summary -->
+            <div class="bg-white rounded-lg card-shadow p-6 mb-6">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">
+                    <i class="fas fa-chart-line text-blue-600 mr-2"></i>Executive Summary
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                    <div class="result-card p-4 rounded-lg text-center">
+                        <div class="text-2xl font-bold text-dark-blue" id="totalClaimsRecovery">$2,700,000</div>
+                        <div class="text-sm text-gray-600">Claims Recovery</div>
+                    </div>
+                    <div class="result-card p-4 rounded-lg text-center">
+                        <div class="text-2xl font-bold text-dark-green" id="totalOperationalSavings">$720,000</div>
+                        <div class="text-sm text-gray-600">Operational Savings</div>
+                    </div>
+                    <div class="result-card p-4 rounded-lg text-center">
+                        <div class="text-2xl font-bold text-red" id="netAnnualBenefit">$3,020,000</div>
+                        <div class="text-sm text-gray-600">Net Annual Benefit</div>
+                    </div>
+                    <div class="result-card p-4 rounded-lg text-center">
+                        <div class="text-2xl font-bold text-red" id="combinedROI">604%</div>
+                        <div class="text-sm text-gray-600">Combined ROI</div>
+                    </div>
+                    <div class="result-card p-4 rounded-lg text-center">
+                        <div class="text-2xl font-bold text-blue-600" id="paybackPeriod">2.4</div>
+                        <div class="text-sm text-gray-600">Payback (Months)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Claims Revenue Recovery Section -->
+                <div class="bg-white rounded-lg card-shadow p-6">
+                    <h3 class="text-xl font-bold text-blue-600 mb-4">
+                        <i class="fas fa-dollar-sign mr-2"></i>Claims Revenue Recovery
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Annual Claims Volume</label>
+                            <input type="number" id="annualClaims" value="300000" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Current Denial Rate (%)</label>
+                            <input type="number" id="denialRate" value="8" step="0.1" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Preventable Denials (%)</label>
+                            <input type="number" id="preventableRate" value="60" step="0.1" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Average Claim Value ($)</label>
+                            <input type="number" id="avgClaimValue" value="250" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">BeyondCode Recovery Rate (%)</label>
+                            <input type="number" id="recoveryRate" value="75" step="0.1" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="mt-6 space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-blue-50 rounded">
+                            <span class="text-sm text-gray-700">Total Denied Claims:</span>
+                            <span class="font-bold text-blue-600" id="totalDeniedClaims">24,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-blue-50 rounded">
+                            <span class="text-sm text-gray-700">Preventable Denied Claims:</span>
+                            <span class="font-bold text-blue-600" id="preventableDeniedClaims">14,400</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-blue-50 rounded">
+                            <span class="text-sm text-gray-700">Revenue at Risk:</span>
+                            <span class="font-bold text-blue-600" id="revenueAtRisk">$3,600,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-green-50 rounded border-l-4 border-green-500">
+                            <span class="text-sm text-gray-700">Claims Revenue Recovery:</span>
+                            <span class="font-bold text-green-600" id="claimsRecoveryResult">$2,700,000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Operational Efficiency Section -->
+                <div class="bg-white rounded-lg card-shadow p-6">
+                    <h3 class="text-xl font-bold text-green-600 mb-4">
+                        <i class="fas fa-cogs mr-2"></i>Operational Efficiency
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Staff Hours per 1000 Claims</label>
+                            <input type="number" id="staffHours" value="120" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Average Hourly Rate ($)</label>
+                            <input type="number" id="hourlyRate" value="35" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Rework Reduction (%)</label>
+                            <input type="number" id="reworkReduction" value="40" step="0.1" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Compliance Violations/Month</label>
+                            <input type="number" id="complianceViolations" value="25" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Average Violation Cost ($)</label>
+                            <input type="number" id="violationCost" value="15000" class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="mt-6 space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-green-50 rounded">
+                            <span class="text-sm text-gray-700">Staff Cost Savings:</span>
+                            <span class="font-bold text-green-600" id="staffCostSavings">$504,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-green-50 rounded">
+                            <span class="text-sm text-gray-700">Compliance Savings:</span>
+                            <span class="font-bold text-green-600" id="complianceSavings">$225,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-green-50 rounded border-l-4 border-green-500">
+                            <span class="text-sm text-gray-700">Total Operational Savings:</span>
+                            <span class="font-bold text-green-600" id="operationalSavingsResult">$729,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Combined Analysis Section -->
+            <div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="dark-blue-bg text-white rounded-lg card-shadow p-6">
+                    <h3 class="text-xl font-bold mb-4">
+                        <i class="fas fa-calculator mr-2"></i>Combined ROI Analysis
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-1">BeyondCode Annual Fee ($)</label>
+                            <input type="number" id="annualFee" value="500000" class="w-full p-2 border border-gray-300 rounded-md bg-white text-gray-800">
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-white bg-opacity-20 rounded">
+                            <span class="text-sm">Total Annual Savings:</span>
+                            <span class="font-bold" id="totalAnnualSavings">$3,429,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white bg-opacity-20 rounded">
+                            <span class="text-sm">Implementation Cost:</span>
+                            <span class="font-bold text-red-300" id="implementationCost">$500,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white bg-opacity-20 rounded border-l-4 border-yellow-400">
+                            <span class="text-sm">Net Annual Benefit:</span>
+                            <span class="font-bold text-yellow-300" id="netBenefitResult">$2,929,000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white bg-opacity-20 rounded border-l-4 border-yellow-400">
+                            <span class="text-sm">ROI Percentage:</span>
+                            <span class="font-bold text-yellow-300" id="roiPercentageResult">586%</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white bg-opacity-20 rounded border-l-4 border-blue-300">
+                            <span class="text-sm">Payback Period:</span>
+                            <span class="font-bold text-blue-300" id="paybackResult">2.1 months</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg card-shadow p-6">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-3">Payback Timeline</h4>
+                    <div class="chart-container">
+                        <canvas id="paybackChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section id="case-studies" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Proven Results</h2>
+                <p class="text-lg text-gray-600">Real-world implementations demonstrating the transformative impact of autonomous code remediation across different hospital types and specialties.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg card-shadow p-6 text-center">
+                    <div class="text-sm text-gray-500 mb-2">REGIONAL MEDICAL CENTER</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">500-Bed Community Hospital</h3>
+                    <div class="text-lg text-gray-600 mb-4">$600M Annual Claims</div>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Challenge:</span>
+                            <span class="font-semibold">15% MA Denial Rate</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Solution:</span>
+                            <span class="font-semibold">Phase 1 Implementation</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Timeline:</span>
+                            <span class="font-semibold">3 Months</span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-1">62%</div>
+                        <div class="text-sm text-gray-600 mb-2">Reduction in coding denials</div>
+                        <div class="text-lg font-bold text-gray-800">$12.8M Recovered</div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg card-shadow p-6 text-center">
+                    <div class="text-sm text-gray-500 mb-2">METROPOLITAN HEALTH SYSTEM</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">800-Bed Academic Hospital</h3>
+                    <div class="text-lg text-gray-600 mb-4">$1.2B Annual Claims</div>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Challenge:</span>
+                            <span class="font-semibold">Modifier & Bundling Errors</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Solution:</span>
+                            <span class="font-semibold">Comprehensive Deployment</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Timeline:</span>
+                            <span class="font-semibold">6 Months</span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-1">18x</div>
+                        <div class="text-sm text-gray-600 mb-2">ROI achieved</div>
+                        <div class="text-lg font-bold text-gray-800">$23.1M Prevented</div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg card-shadow p-6 text-center">
+                    <div class="text-sm text-gray-500 mb-2">COMMUNITY HOSPITAL NETWORK</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">300-Bed Rural Hospital</h3>
+                    <div class="text-lg text-gray-600 mb-4">$400M Annual Claims</div>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Challenge:</span>
+                            <span class="font-semibold">Limited Coding Staff</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Solution:</span>
+                            <span class="font-semibold">Automated Remediation</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Timeline:</span>
+                            <span class="font-semibold">2 Months</span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-1">45%</div>
+                        <div class="text-sm text-gray-600 mb-2">Staff time savings</div>
+                        <div class="text-lg font-bold text-gray-800">$8.7M Recovery</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beyond-AI Evolution -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Beyond-AI Evolution</h2>
+                <p class="text-lg text-gray-600 max-w-4xl mx-auto">
+                    We began as a technology incubator focused on autonomous systems and evolved into the definitive platform for healthcare intelligence. Our Pinnacle platform represents the next generation of enterprise-grade autonomous technology.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-24 h-16 dark-blue-bg text-white rounded-lg flex items-center justify-center font-bold text-lg">
+                        2023
+                    </div>
+                    <div class="ml-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Founded Beyond-AI as technology incubator focused on autonomous systems</h3>
+                        <p class="text-gray-600">Technology Incubator Foundation</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-24 h-16 dark-green-bg text-white rounded-lg flex items-center justify-center font-bold text-sm">
+                        Q1 2024
+                    </div>
+                    <div class="ml-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Pinnacle platform foundation and core architecture developed</h3>
+                        <p class="text-gray-600">Core architecture with autonomous code generation and self-correcting capabilities</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-24 h-16 dark-blue-bg text-white rounded-lg flex items-center justify-center font-bold text-sm">
+                        Q2 2024
+                    </div>
+                    <div class="ml-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Advanced pattern recognition and logic analysis engine completed</h3>
+                        <p class="text-gray-600">Enhanced pattern recognition capabilities for complex healthcare scenarios</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-24 h-16 dark-green-bg text-white rounded-lg flex items-center justify-center font-bold text-sm">
+                        Q3 2024
+                    </div>
+                    <div class="ml-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Autonomous Code Generation (ACG) module integrated into Pinnacle</h3>
+                        <p class="text-gray-600">Advanced autonomous code generation capabilities</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-24 h-16 dark-blue-bg text-white rounded-lg flex items-center justify-center font-bold text-sm">
+                        Q4 2024
+                    </div>
+                    <div class="ml-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Healthcare-specific rule engines and payer intelligence added</h3>
+                        <p class="text-gray-600">Specialized healthcare modules for revenue cycle optimization</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-24 h-16 dark-green-bg text-white rounded-lg flex items-center justify-center font-bold text-sm">
+                        Q1 2025
+                    </div>
+                    <div class="ml-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">BeyondCode launched as first specialized Pinnacle application for healthcare</h3>
+                        <p class="text-gray-600">BeyondCode Specialization</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-600 mb-2">70+</div>
+                        <div class="text-gray-600">Intelligence Services</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-2">24/7</div>
+                        <div class="text-gray-600">Autonomous Operation</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-600 mb-2">FHIR</div>
+                        <div class="text-gray-600">Native Integration</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-2">HIPAA</div>
+                        <div class="text-gray-600">Compliant</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ready to Transform Your Revenue Cycle -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Ready to Transform Your Revenue Cycle?</h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-4xl mx-auto">
+                Join the hospitals already eliminating millions in preventable denials through autonomous code remediation. Let's discuss your specific needs and ROI potential.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Request a Demo Form -->
+                <div class="bg-white rounded-lg card-shadow p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Request a Demo</h3>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <input type="text" placeholder="First Name" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Last Name" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email Address" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Phone Number" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <select class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option>Hospital Type</option>
+                                <option>Community Hospital</option>
+                                <option>Academic Medical Center</option>
+                                <option>Health System</option>
+                                <option>Critical Access Hospital</option>
+                                <option>Specialty Hospital</option>
+                            </select>
+                        </div>
+                        <div>
+                            <textarea placeholder="Tell us about your denial challenges" rows="4" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full healthcare-gradient text-white py-3 rounded-md font-semibold hover:opacity-90 transition-opacity">
+                            Request Demo
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Get Started Steps -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Get Started</h3>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">1</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Initial Analysis</h4>
+                            <p class="text-gray-600">30-day assessment of your current denial patterns and coding logic issues</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">2</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Pilot Implementation</h4>
+                            <p class="text-gray-600">Focused deployment on highest-impact denial categories</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">3</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Full Deployment</h4>
+                            <p class="text-gray-600">Comprehensive autonomous code remediation across all revenue cycle systems</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h4 class="text-lg font-bold text-gray-800 mb-4">Executive Contact</h4>
+                        <div class="space-y-2">
+                            <p><strong>Email:</strong> <span class="text-dark-blue"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bcc8deced2d9fcded9c5d3d2d891ddd592d2d9c8">[email&#160;protected]</a></span></p>
+                            <p><strong>Direct:</strong> <span class="text-dark-blue">312-725-6556</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">BeyondCode</h3>
+                    <p class="text-gray-300 mb-4">Autonomous Code Remediation for Healthcare Revenue Cycle</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Solution</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#solution" class="text-gray-300 hover:text-white">Autonomous Capabilities</a></li>
+                        <li><a href="#platform" class="text-gray-300 hover:text-white">Platform Evolution</a></li>
+                        <li><a href="#roi-calculator" class="text-gray-300 hover:text-white">ROI Calculator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-300 hover:text-white">About Beyond-AI</a></li>
+                        <li><a href="#case-studies" class="text-gray-300 hover:text-white">Case Studies</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <div class="space-y-2">
+                        <p class="text-gray-300">Thomas Brne</p>
+                        <p class="text-gray-300"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3d495f4f53587d5f5844525359105c5413535849">[email&#160;protected]</a></p>
+                        <p class="text-gray-300">312-725-6556</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 Beyond-AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Initialize charts
+        let paybackChart;
+
+        // Calculate and update all values
+        function calculateAll() {
+            // Get input values
+            const annualClaims = parseFloat(document.getElementById('annualClaims').value) || 0;
+            const denialRate = parseFloat(document.getElementById('denialRate').value) || 0;
+            const preventableRate = parseFloat(document.getElementById('preventableRate').value) || 0;
+            const avgClaimValue = parseFloat(document.getElementById('avgClaimValue').value) || 0;
+            const recoveryRate = parseFloat(document.getElementById('recoveryRate').value) || 0;
+            
+            const staffHours = parseFloat(document.getElementById('staffHours').value) || 0;
+            const hourlyRate = parseFloat(document.getElementById('hourlyRate').value) || 0;
+            const reworkReduction = parseFloat(document.getElementById('reworkReduction').value) || 0;
+            const complianceViolations = parseFloat(document.getElementById('complianceViolations').value) || 0;
+            const violationCost = parseFloat(document.getElementById('violationCost').value) || 0;
+            
+            const annualFee = parseFloat(document.getElementById('annualFee').value) || 0;
+
+            // Claims Recovery Calculations
+            const totalDenied = annualClaims * (denialRate / 100);
+            const preventableDenied = totalDenied * (preventableRate / 100);
+            const revenueAtRisk = preventableDenied * avgClaimValue;
+            const claimsRecovery = revenueAtRisk * (recoveryRate / 100);
+
+            // Operational Efficiency Calculations
+            const totalStaffHours = (annualClaims / 1000) * staffHours;
+            const staffCostSavings = totalStaffHours * hourlyRate * (reworkReduction / 100);
+            const complianceSavings = complianceViolations * 12 * violationCost * 0.6; // 60% reduction
+            const operationalSavings = staffCostSavings + complianceSavings;
+
+            // Combined Analysis
+            const totalAnnualSavings = claimsRecovery + operationalSavings;
+            const netBenefit = totalAnnualSavings - annualFee;
+            const roiPercentage = annualFee > 0 ? (netBenefit / annualFee) * 100 : 0;
+            const paybackMonths = totalAnnualSavings > 0 ? (annualFee / (totalAnnualSavings / 12)) : 0;
+
+            // Update displays
+            document.getElementById('totalDeniedClaims').textContent = Math.round(totalDenied).toLocaleString();
+            document.getElementById('preventableDeniedClaims').textContent = Math.round(preventableDenied).toLocaleString();
+            document.getElementById('revenueAtRisk').textContent = '$' + Math.round(revenueAtRisk).toLocaleString();
+            document.getElementById('claimsRecoveryResult').textContent = '$' + Math.round(claimsRecovery).toLocaleString();
+
+            document.getElementById('staffCostSavings').textContent = '$' + Math.round(staffCostSavings).toLocaleString();
+            document.getElementById('complianceSavings').textContent = '$' + Math.round(complianceSavings).toLocaleString();
+            document.getElementById('operationalSavingsResult').textContent = '$' + Math.round(operationalSavings).toLocaleString();
+
+            document.getElementById('totalAnnualSavings').textContent = '$' + Math.round(totalAnnualSavings).toLocaleString();
+            document.getElementById('implementationCost').textContent = '$' + Math.round(annualFee).toLocaleString();
+            document.getElementById('netBenefitResult').textContent = '$' + Math.round(netBenefit).toLocaleString();
+            document.getElementById('roiPercentageResult').textContent = Math.round(roiPercentage) + '%';
+            document.getElementById('paybackResult').textContent = paybackMonths.toFixed(1) + ' months';
+
+            // Update executive summary
+            document.getElementById('totalClaimsRecovery').textContent = '$' + Math.round(claimsRecovery).toLocaleString();
+            document.getElementById('totalOperationalSavings').textContent = '$' + Math.round(operationalSavings).toLocaleString();
+            document.getElementById('netAnnualBenefit').textContent = '$' + Math.round(netBenefit).toLocaleString();
+            document.getElementById('combinedROI').textContent = Math.round(roiPercentage) + '%';
+            document.getElementById('paybackPeriod').textContent = paybackMonths.toFixed(1);
+
+            // Update charts
+            updatePaybackChart(annualFee, totalAnnualSavings);
+        }
+
+        function updatePaybackChart(annualFee, totalAnnualSavings) {
+            // Destroy existing chart if it exists
+            if (paybackChart && typeof paybackChart.destroy === 'function') {
+                try {
+                    paybackChart.destroy();
+                } catch (e) {
+                    console.log('Chart destruction error:', e);
+                }
+                paybackChart = null;
+            }
+
+            // Get canvas element
+            const canvas = document.getElementById('paybackChart');
+            if (!canvas) {
+                console.error('Payback chart canvas not found');
+                return;
+            }
+
+            // Clear canvas
+            const ctx = canvas.getContext('2d');
+            if (!ctx) {
+                console.error('Cannot get 2D context for payback chart');
+                return;
+            }
+
+            // Reset canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Calculate data
+            const monthlySavings = totalAnnualSavings / 12;
+            const months = [];
+            const cumulativeSavings = [];
+            const investment = [];
+
+            for (let i = 1; i <= 12; i++) {
+                months.push(`Month ${i}`);
+                cumulativeSavings.push(monthlySavings * i);
+                investment.push(annualFee);
+            }
+
+            try {
+                // Create new chart
+                paybackChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: months,
+                        datasets: [
+                            {
+                                label: 'Cumulative Savings',
+                                data: cumulativeSavings,
+                                borderColor: '#059669',
+                                backgroundColor: 'rgba(5, 150, 105, 0.1)',
+                                fill: true,
+                                tension: 0.4,
+                                pointBackgroundColor: '#059669',
+                                pointBorderColor: '#059669',
+                                pointRadius: 4,
+                                pointHoverRadius: 6
+                            },
+                            {
+                                label: 'Investment',
+                                data: investment,
+                                borderColor: '#dc2626',
+                                backgroundColor: 'rgba(220, 38, 38, 0.1)',
+                                borderDash: [5, 5],
+                                pointBackgroundColor: '#dc2626',
+                                pointBorderColor: '#dc2626',
+                                pointRadius: 4,
+                                pointHoverRadius: 6,
+                                fill: false
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                                labels: {
+                                    usePointStyle: true,
+                                    font: {
+                                        size: 12
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                mode: 'index',
+                                intersect: false,
+                                callbacks: {
+                                    label: function(context) {
+                                        const value = context.parsed.y;
+                                        return context.dataset.label + ': $' + value.toLocaleString();
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                display: true,
+                                title: {
+                                    display: true,
+                                    text: 'Timeline'
+                                },
+                                grid: {
+                                    display: true,
+                                    color: 'rgba(0, 0, 0, 0.1)'
+                                }
+                            },
+                            y: {
+                                display: true,
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Amount ($)'
+                                },
+                                ticks: {
+                                    callback: function(value) {
+                                        if (value >= 1000000) {
+                                            return '$' + (value / 1000000).toFixed(1) + 'M';
+                                        } else if (value >= 1000) {
+                                            return '$' + (value / 1000).toFixed(0) + 'K';
+                                        } else {
+                                            return '$' + value.toLocaleString();
+                                        }
+                                    }
+                                },
+                                grid: {
+                                    display: true,
+                                    color: 'rgba(0, 0, 0, 0.1)'
+                                }
+                            }
+                        },
+                        interaction: {
+                            mode: 'nearest',
+                            intersect: false
+                        },
+                        elements: {
+                            point: {
+                                hoverBackgroundColor: 'rgba(255, 255, 255, 0.8)',
+                                hoverBorderWidth: 2
+                            }
+                        }
+                    }
+                });
+            } catch (error) {
+                console.error('Error creating payback chart:', error);
+                // Fallback: display a simple message
+                ctx.font = '16px Arial';
+                ctx.fillStyle = '#666';
+                ctx.textAlign = 'center';
+                ctx.fillText('Chart loading...', canvas.width / 2, canvas.height / 2);
+            }
+        }
+
+        // Add event listeners to all inputs
+        function initializeEventListeners() {
+            const inputs = document.querySelectorAll('#roi-calculator input');
+            inputs.forEach(input => {
+                if (input && typeof input.addEventListener === 'function') {
+                    input.addEventListener('input', calculateAll);
+                    input.addEventListener('change', calculateAll);
+                }
+            });
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                initializeEventListeners();
+                calculateAll();
+            } catch (error) {
+                console.error('Initialization error:', error);
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (paybackChart && typeof paybackChart.resize === 'function') {
+                paybackChart.resize();
+            }
+        });
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"95f2f8beec8014ee","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.6.2","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDnrgiSrlzXBb58OUPqieoe%2Bc62Uu9xUOHVvsCa73ha2oPLbYsGIbxagtJ7OnpPMcuZ%2FMRE6ambDcPSQEsgRAM1P%2FuKii9xPec2%2FeAKtWzQwsMUxEeqRwpeYEekApxFXbwW%2Fl%2BTQHy62%2BfPn31qjASRwUhnk0HwndS%2FFTepsHofVgU8r977cz6IO8pgmu0hDOtG1TpElF1hdo5rB1uW1ZylQaNeAIDre1COGVEhHYImveiLkp1BqSXyJjgT9jibLPIBmoJJzgbg4fGpCtTjVpskZcfI6K8Jr8VRG9OCAWlPL%2FrOvp0UeY3MGjH0OJiTc6ZSORwa5uKHZBXuUDfyWHfLW54JZB9oPgBA7KSfCCY3JpjpTJ%2BH5KrPqUNMyOq%2BJrIv9NrBUNMdNV8IzITmscE3b%2BgTtnKawXPKGvF8luL8j%2FTHqftSxl6xjhYpMFQJekWqRNUL4rzwU43yxEg3hmofqn%2BE2LU%2FUNWOozWa2arkAxyXYrT%2BxEi79HLmevMidapR8lWffkTLb1q5a5MsUaKA4%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDnrgiSrlzXBb58OUPqieoe+c62Uu9xUOHVvsCa73ha2oPLbYsGIbxagtJ7OnpPMcuZ/MRE6ambDcPSQEsgRAM1P/uKii9xPec2/eAKtWzQwsMUxEeqRwpeYEekApxFXbwW/l+TQHy62+fPn31qjASRwUhnk0HwndS/FTepsHofVgU8r977cz6IO8pgmu0hDOtG1TpElF1hdo5rB1uW1ZylQaNeAIDre1COGVEhHYImveiLkp1BqSXyJjgT9jibLPIBmoJJzgbg4fGpCtTjVpskZcfI6K8Jr8VRG9OCAWlPL/rOvp0UeY3MGjH0OJiTc6ZSORwa5uKHZBXuUDfyWHfLW54JZB9oPgBA7KSfCCY3JpjpTJ+H5KrPqUNMyOq+JrIv9NrBUNMdNV8IzITmscE3b+gTtnKawXPKGvF8luL8j/THqftSxl6xjhYpMFQJekWqRNUL4rzwU43yxEg3hmofqn+E2LU/UNWOozWa2arkAxyXYrT+xEi79HLmevMidapR8lWffkTLb1q5a5MsUaKA4=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    
