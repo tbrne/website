@@ -432,7 +432,7 @@
         // Direct PDF download function
         function downloadWhitepaper() {
             // Fetch the PDF from current AI Drive location and trigger download
-            fetch('https://raw.githubusercontent.com/tlonie/website/main/AI_vs_Healthcare_The_Denial_Wars_Whitepaper%20(1).pdf')
+            fetch('https://github.com/tlonie/website/raw/main/AI_vs_Healthcare_The_Denial_Wars_Whitepaper%20(1).pdf')
                 .then(response => response.blob())
                 .then(blob => {
                     const url = window.URL.createObjectURL(blob);
