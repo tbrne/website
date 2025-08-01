@@ -432,7 +432,7 @@
         // Direct PDF download function
         function downloadWhitepaper() {
             // Fetch the PDF from current AI Drive location and trigger download
-            fetch('https://gensparkstorageprodwest.blob.core.windows.net/web-drive/9dc1d80c-e9d5-43e1-af0a-157ab0aeacc3/3b5b652e-ae1b-409e-bebf-c4f754f4d5c5?se=2025-08-01T17%3A45%3A25Z&sp=r&sv=2025-05-05&sr=b&rscd=attachment%3B%20filename%3D%22AI_vs_Healthcare_The_Denial_Wars_Whitepaper.pdf%22&sig=og35OVAeABRS1FqVeYn1mKAw1YM0uB1VB/v%2Bq4MaLPU%3D')
+            fetch('https://raw.githubusercontent.com/tlonie/website/main/AI_vs_Healthcare_The_Denial_Wars_Whitepaper%20(1).pdf')
                 .then(response => response.blob())
                 .then(blob => {
                     const url = window.URL.createObjectURL(blob);
