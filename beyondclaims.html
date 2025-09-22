@@ -1,0 +1,689 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeyondClaims - Advanced Healthcare Revenue Cycle Management | Beyond-AI</title>
+    <meta name="description" content="BeyondClaims platform delivers $15M-$25M annual savings per hospital through advanced revenue cycle management and claims optimization technology.">
+    <meta name="keywords" content="healthcare revenue cycle management, claims processing, denial management, underpayment recovery, medical billing automation, payer intelligence, healthcare AI">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'beyond-blue': '#1e3a8a',
+                        'beyond-teal': '#059669'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #059669 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #1e3a8a 0%, #059669 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .section-divider {
+            background: linear-gradient(90deg, transparent 0%, #059669 50%, transparent 100%);
+            height: 2px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="text-2xl font-bold gradient-text">
+                        BeyondClaims powered by Beyond-AI
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#solution" class="text-gray-700 hover:text-beyond-blue transition-colors">Solution</a>
+                    <a href="#platform" class="text-gray-700 hover:text-beyond-blue transition-colors">Platform</a>
+                    <a href="#roi" class="text-gray-700 hover:text-beyond-blue transition-colors">ROI Calculator</a>
+                    <a href="#cases" class="text-gray-700 hover:text-beyond-blue transition-colors">Case Studies</a>
+                    <a href="#resources" class="text-gray-700 hover:text-beyond-blue transition-colors">Resources</a>
+                    <a href="#demo" class="bg-gradient-to-r from-beyond-blue to-beyond-teal text-white px-6 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                        Request Demo
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden mt-4 md:hidden">
+                <div class="flex flex-col space-y-4">
+                    <a href="#solution" class="text-gray-700 hover:text-beyond-blue transition-colors">Solution</a>
+                    <a href="#platform" class="text-gray-700 hover:text-beyond-blue transition-colors">Platform</a>
+                    <a href="#roi" class="text-gray-700 hover:text-beyond-blue transition-colors">ROI Calculator</a>
+                    <a href="#cases" class="text-gray-700 hover:text-beyond-blue transition-colors">Case Studies</a>
+                    <a href="#resources" class="text-gray-700 hover:text-beyond-blue transition-colors">Resources</a>
+                    <a href="#demo" class="bg-gradient-to-r from-beyond-blue to-beyond-teal text-white px-6 py-2 rounded-lg hover:opacity-90 transition-opacity inline-block text-center">
+                        Request Demo
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                Transform Your Revenue Cycle
+                <span class="block text-yellow-300">From Doctor's Notes to Payment</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+                BeyondClaims revolutionizes healthcare revenue cycle management, delivering <strong>$15M-$25M annual savings per hospital</strong> 
+                through intelligent automation that spans from clinical documentation to final payment collection.
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                <a href="#demo" class="bg-white text-beyond-blue px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
+                    See the Complete Solution
+                </a>
+                <a href="#scenario" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-beyond-blue transition-colors">
+                    View Real Results
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Overview -->
+    <section id="solution" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text mb-6">Complete Revenue Cycle Transformation</h2>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                    From the moment a physician documents patient care to the final payment collection, BeyondClaims optimizes every step of your revenue cycle with intelligent automation and machine learning.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="text-center p-8 bg-gray-50 rounded-xl card-hover">
+                    <div class="text-4xl text-beyond-blue mb-4">
+                        <i class="fas fa-file-medical-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Clinical Documentation</h3>
+                    <p class="text-gray-600">Extract and optimize clinical data from physician notes and medical records</p>
+                </div>
+
+                <div class="text-center p-8 bg-gray-50 rounded-xl card-hover">
+                    <div class="text-4xl text-beyond-teal mb-4">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Intelligent Processing</h3>
+                    <p class="text-gray-600">AI-powered claims creation, denial management, and underpayment detection</p>
+                </div>
+
+                <div class="text-center p-8 bg-gray-50 rounded-xl card-hover">
+                    <div class="text-4xl text-beyond-blue mb-4">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Revenue Recovery</h3>
+                    <p class="text-gray-600">Maximize reimbursements and reduce revenue leakage across all payers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intelligent Claims Creation -->
+    <section id="platform" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold gradient-text mb-8">Intelligent Claims Creation</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-beyond-blue text-white p-2 rounded-full text-sm font-bold">1</div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Payer-Specific Intelligence</h3>
+                                <p class="text-gray-600">BeyondClaims learns exactly what each payer requires for every procedure. The same surgery gets different claim formatting for different insurers - we give them exactly what they want upfront.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-beyond-teal text-white p-2 rounded-full text-sm font-bold">2</div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Lightning-Fast Processing</h3>
+                                <p class="text-gray-600">Complex claims that typically take weeks are processed in <strong>minutes</strong>. Our AI understands clinical context and payer requirements simultaneously.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-beyond-blue text-white p-2 rounded-full text-sm font-bold">3</div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Proactive Compliance</h3>
+                                <p class="text-gray-600">Instead of reactive corrections, we prevent denials by automatically adapting to each payer's evolving requirements and preferences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Processing Speed Comparison</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-4 bg-red-50 rounded-lg">
+                            <span class="font-medium">Traditional Processing</span>
+                            <span class="text-red-600 font-bold">2-3 weeks</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-green-50 rounded-lg">
+                            <span class="font-medium">BeyondClaims Processing</span>
+                            <span class="text-green-600 font-bold">3-5 minutes</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <p class="text-sm text-gray-600">Even the most complex multi-procedure claims</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Denial Management Revolution -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text mb-6">Denial Management Revolution</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Transform your biggest revenue cycle challenge into a competitive advantage with intelligent, lightning-fast denial processing.
+                </p>
+            </div>
+
+            <!-- Problem Statement -->
+            <div class="bg-red-50 border-l-4 border-red-500 p-8 mb-12 rounded-r-lg">
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <h3 class="text-3xl font-bold text-red-600 mb-2">12-15%</h3>
+                        <p class="text-gray-700">Industry standard denial rates</p>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-red-600 mb-2">$25-50</h3>
+                        <p class="text-gray-700">Cost to process each denial</p>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-red-600 mb-2">Millions</h3>
+                        <p class="text-gray-700">Lost annually to denial processing</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold mb-8">BeyondClaims Solution</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-green-500 text-white p-2 rounded-full text-sm font-bold">✓</div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Process Every Denial</h4>
+                                <p class="text-gray-600">We process <strong>every denial regardless of dollar amount</strong> - even small claims get attention because volume adds up.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-green-500 text-white p-2 rounded-full text-sm font-bold">⚡</div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Seconds, Not Days</h4>
+                                <p class="text-gray-600">Denial analysis and corrected claim preparation completed in <strong>seconds</strong>, with 837 ready for immediate resubmission.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-green-500 text-white p-2 rounded-full text-sm font-bold">🧠</div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Machine Learning Advantage</h4>
+                                <p class="text-gray-600">Every denial teaches BeyondClaims to submit better future claims. Your denial rate drops from <strong>12-15% to 3-6%</strong> over time.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-green-500 text-white p-2 rounded-full text-sm font-bold">⏱️</div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Minutes to Resubmit</h4>
+                                <p class="text-gray-600">From denial received to corrected claim resubmitted in <strong>minutes</strong>, not the industry standard weeks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Denial Rate Transformation</h3>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="font-medium">Before BeyondClaims</span>
+                                <span class="text-2xl font-bold text-red-600">12-15%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-red-600 h-3 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="font-medium">After BeyondClaims</span>
+                                <span class="text-2xl font-bold text-green-600">3-6%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-green-600 h-3 rounded-full" style="width: 30%"></div>
+                            </div>
+                        </div>
+
+                        <div class="text-center pt-4">
+                            <p class="text-sm text-gray-600">Results typically achieved within 6-12 months</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Underpayment Recovery -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text mb-6">Underpayment Recovery</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Hospitals lose up to 5% of annual revenue to underpayments - money that's rightfully yours but goes undetected by traditional systems.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-center text-red-600">The Hidden Revenue Loss</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-4 bg-red-50 rounded-lg">
+                            <span class="font-medium">Average Hospital Revenue</span>
+                            <span class="font-bold">$300M annually</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-red-100 rounded-lg">
+                            <span class="font-medium">Potential Underpayment Loss</span>
+                            <span class="font-bold text-red-600">Up to $15M (5%)</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-red-200 rounded-lg">
+                            <span class="font-medium">Currently Undetected</span>
+                            <span class="font-bold text-red-700">Most hospitals miss this</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-3xl font-bold mb-8">Systematic Detection & Recovery</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-beyond-blue text-white p-2 rounded-full text-sm font-bold">1</div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Contract Intelligence</h4>
+                                <p class="text-gray-600">BeyondClaims maintains real-time awareness of your payer contracts, fee schedules, and payment terms to identify discrepancies instantly.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-beyond-teal text-white p-2 rounded-full text-sm font-bold">2</div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Pattern Recognition</h4>
+                                <p class="text-gray-600">Advanced AI identifies systematic underpayment patterns that human reviewers typically miss, even in complex multi-service encounters.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-beyond-blue text-white p-2 rounded-full text-sm font-bold">3</div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Automated Appeals</h4>
+                                <p class="text-gray-600">Generate documentation and appeals automatically with supporting evidence, reducing manual work while maximizing recovery success rates.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-beyond-teal text-white p-2 rounded-full text-sm font-bold">4</div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Continuous Monitoring</h4>
+                                <p class="text-gray-600">Ongoing surveillance of all payments ensures new underpayment patterns are caught immediately, not months later during manual audits.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Advantage -->
+    <section id="roi" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text mb-6">Predictable Pricing Advantage</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Unlike traditional RCM solutions, BeyondClaims uses flat-rate pricing that aligns with your budget planning and operational goals.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="bg-red-50 p-8 rounded-xl border-l-4 border-red-500">
+                    <h3 class="text-2xl font-bold mb-6 text-red-700">Traditional RCM Pricing Problems</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-times text-red-500"></i>
+                            <span>Percentage-based fees (3-8% of collections)</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-times text-red-500"></i>
+                            <span>Per-claim processing charges</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-times text-red-500"></i>
+                            <span>Unpredictable monthly costs</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-times text-red-500"></i>
+                            <span>Incentive to avoid small-dollar claims</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-times text-red-500"></i>
+                            <span>Budget planning challenges</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-green-50 p-8 rounded-xl border-l-4 border-green-500">
+                    <h3 class="text-2xl font-bold mb-6 text-green-700">BeyondClaims Flat-Rate Benefits</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span><strong>Flat monthly rate</strong> - predictable costs</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span><strong>No per-claim fees</strong> - unlimited processing</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span><strong>Budget certainty</strong> - plan with confidence</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span><strong>Every claim processed</strong> - no dollar minimums</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span><strong>Aligned incentives</strong> - we succeed when you do</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <div class="bg-gradient-to-r from-blue-50 to-teal-50 p-8 rounded-xl inline-block">
+                    <h3 class="text-2xl font-bold mb-4">Why Flat-Rate Pricing Works</h3>
+                    <p class="text-lg text-gray-700 max-w-2xl">
+                        We're confident enough in our technology to charge a predictable rate regardless of your claim volume. 
+                        This means we process every denial, every underpayment, and every claim with equal attention because 
+                        our success is measured by your operational efficiency, not transaction volume.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-World Scenario -->
+    <section id="scenario" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text mb-6">Real-World Impact</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    See how BeyondClaims transforms revenue cycle performance for a typical $300M annual revenue hospital system.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 md:p-12 rounded-xl shadow-lg max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Current State -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-red-600">Current State: Revenue Leakage</h3>
+                        <div class="space-y-4">
+                            <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium">Annual Revenue</span>
+                                    <span class="font-bold">$300,000,000</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-red-100 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-medium">Denial Losses (13.5% avg)</span>
+                                    <span class="font-bold text-red-600">$40,500,000</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Industry standard denial rate</p>
+                            </div>
+
+                            <div class="bg-red-200 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-medium">Underpayment Losses (5%)</span>
+                                    <span class="font-bold text-red-700">$15,000,000</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Undetected by current systems</p>
+                            </div>
+
+                            <div class="bg-red-300 p-4 rounded-lg border-2 border-red-500">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-bold">Total Annual Loss</span>
+                                    <span class="font-bold text-red-800 text-xl">$55,500,000</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 p-4 bg-gray-100 rounded-lg">
+                                <h4 class="font-semibold mb-2">Additional Hidden Costs:</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Manual denial processing: $2M+ annually</li>
+                                    <li>• Delayed cash flow from slow resubmissions</li>
+                                    <li>• Staff overtime for claim management</li>
+                                    <li>• Consultant fees for revenue cycle audits</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BeyondClaims Impact -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-green-600">With BeyondClaims: Revenue Recovery</h3>
+                        <div class="space-y-4">
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-medium">Denial Rate Reduction</span>
+                                    <span class="font-bold text-green-600">13.5% → 4.5%</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Recovered: $27M annually</p>
+                            </div>
+
+                            <div class="bg-green-100 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-medium">Underpayment Recovery</span>
+                                    <span class="font-bold text-green-700">85% detected</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Recovered: $12.75M annually</p>
+                            </div>
+
+                            <div class="bg-green-200 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-medium">Processing Cost Savings</span>
+                                    <span class="font-bold text-green-800">$1.8M annually</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Automated vs manual processing</p>
+                            </div>
+
+                            <div class="bg-green-300 p-4 rounded-lg border-2 border-green-500">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-bold">Total Annual Recovery</span>
+                                    <span class="font-bold text-green-900 text-xl">$41,550,000</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                                <h4 class="font-semibold mb-2 text-blue-800">Additional Benefits:</h4>
+                                <ul class="text-sm text-blue-700 space-y-1">
+                                    <li>• Predictable flat-rate pricing</li>
+                                    <li>• Faster cash flow (minutes vs weeks)</li>
+                                    <li>• Staff redeployment to higher-value tasks</li>
+                                    <li>• Continuous improvement through ML</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROI Summary -->
+                <div class="mt-12 bg-gradient-to-r from-beyond-blue to-beyond-teal text-white p-8 rounded-xl text-center">
+                    <h3 class="text-3xl font-bold mb-4">Return on Investment</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div>
+                            <h4 class="text-2xl font-bold text-yellow-300">$41.6M</h4>
+                            <p class="text-lg">Annual Recovery</p>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-yellow-300">1,380%</h4>
+                            <p class="text-lg">ROI in Year 1</p>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-yellow-300">3-6 months</h4>
+                            <p class="text-lg">Payback Period</p>
+                        </div>
+                    </div>
+                    <p class="mt-6 text-lg opacity-90">
+                        Results based on typical implementation with flat-rate pricing model
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Call-to-Action Section -->
+    <section id="demo" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold gradient-text mb-6">Ready to Transform Your Revenue Cycle?</h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Join forward-thinking healthcare organizations that have already recovered millions in lost revenue with BeyondClaims.
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center mb-12">
+                <a href="#contact" class="bg-gradient-to-r from-beyond-blue to-beyond-teal text-white px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity">
+                    Schedule Your Demo
+                </a>
+                <a href="#whitepaper" class="border-2 border-beyond-blue text-beyond-blue px-8 py-4 rounded-lg font-semibold text-lg hover:bg-beyond-blue hover:text-white transition-colors">
+                    Download Case Study
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-beyond-blue mb-2">15-25M</div>
+                    <p class="text-gray-600">Annual savings per hospital</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-beyond-teal mb-2">3-6%</div>
+                    <p class="text-gray-600">Target denial rate achievement</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-beyond-blue mb-2">Minutes</div>
+                    <p class="text-gray-600">Claim processing time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 gradient-text">BeyondClaims</h3>
+                    <p class="text-gray-300 mb-4">Revolutionizing healthcare revenue cycle management through intelligent automation and machine learning.</p>
+                    <p class="text-sm text-gray-400">Powered by Beyond-AI</p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Solution</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#platform" class="hover:text-beyond-teal transition-colors">Claims Processing</a></li>
+                        <li><a href="#platform" class="hover:text-beyond-teal transition-colors">Denial Management</a></li>
+                        <li><a href="#platform" class="hover:text-beyond-teal transition-colors">Underpayment Recovery</a></li>
+                        <li><a href="#roi" class="hover:text-beyond-teal transition-colors">Pricing Model</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#scenario" class="hover:text-beyond-teal transition-colors">Case Studies</a></li>
+                        <li><a href="#roi" class="hover:text-beyond-teal transition-colors">ROI Calculator</a></li>
+                        <li><a href="#" class="hover:text-beyond-teal transition-colors">White Papers</a></li>
+                        <li><a href="#" class="hover:text-beyond-teal transition-colors">Implementation Guide</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#demo" class="hover:text-beyond-teal transition-colors">Request Demo</a></li>
+                        <li><a href="#" class="hover:text-beyond-teal transition-colors">Contact Sales</a></li>
+                        <li><a href="#" class="hover:text-beyond-teal transition-colors">Support</a></li>
+                        <li><a href="#" class="hover:text-beyond-teal transition-colors">Partnership</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Beyond-AI. All rights reserved. BeyondClaims is a registered trademark of Beyond-AI.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
